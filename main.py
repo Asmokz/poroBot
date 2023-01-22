@@ -37,7 +37,18 @@ async def status(ctx, *args):
     response = response.replace(" ", "", 1)
     response = response.replace(" ", "%20")
     poroUrl = "https://porofessor.gg/fr/live/euw/"+response
-    await ctx.send(poroUrl) 
+    await ctx.send(poroUrl)
+
+
+@poroBot.command(name="stat")
+async def status(ctx, *args):
+    response = ""
+    for arg in args:
+        response = response + " " + arg
+    response = response.replace(" ", "", 1)
+    response = response.replace(" ", "%20")
+    poroUrl = "https://www.op.gg/summoners/euw/"+response
+    await ctx.send(poroUrl)  
 
 #async def porofessor(ctx):
  #   await ctx.send(f"Done")
