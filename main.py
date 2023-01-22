@@ -50,8 +50,6 @@ async def status(ctx, *args):
     poroUrl = "https://www.op.gg/summoners/euw/"+response
     await ctx.send(poroUrl)  
 
-#async def porofessor(ctx):
- #   await ctx.send(f"Done")
 
 
 poroBot.run(os.getenv("TOKEN"), log_handler=handler, log_level=logging.INFO)
